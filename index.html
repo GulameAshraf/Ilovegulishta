@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D.El.Ed دوسرا سال - مہاراشٹر اردو بورڈ - مکمل مطالعہ مواد</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f0e17;
+    --surface: #1a1928;
+    --card: #211f35;
+    --card2: #2a2845;
+    --gold: #e8c47a;
+    --gold2: #f5d98b;
+    --green: #6fcf8a;
+    --blue: #7eb8f7;
+    --pink: #f07ab0;
+    --text: #f0eaff;
+    --muted: #a89ec9;
+    --border: rgba(232,196,122,0.18);
+    --radius: 14px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Noto Nastaliq Urdu', 'Noto Sans Arabic', serif;
+    background: var(--bg);
+    color: var(--text);
+    direction: rtl;
+    line-height: 2.2;
+    font-size: 17px;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(135deg, #1a1540 0%, #0f0e17 60%, #1a0e2e 100%);
+    border-bottom: 2px solid var(--border);
+    padding: 60px 20px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 30%, rgba(232,196,122,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(232,196,122,0.12);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 6px 22px;
+    border-radius: 50px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-size: clamp(26px, 5vw, 44px);
+    color: var(--gold);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    text-shadow: 0 0 40px rgba(232,196,122,0.3);
+  }
+  .hero p {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 10px;
+  }
+  .hero-subjects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 28px;
+  }
+  .hero-subjects span {
+    background: rgba(126,184,247,0.1);
+    border: 1px solid rgba(126,184,247,0.3);
+    color: var(--blue);
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 14px;
+  }
+
+  /* ===== NAV ===== */
+  .nav-bar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow-x: auto;
+  }
+  .nav-inner {
+    display: flex;
+    gap: 0;
+    min-width: max-content;
+    padding: 0 16px;
+  }
+  .nav-inner a {
+    display: block;
+    padding: 14px 18px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+  }
+  .nav-inner a:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  /* ===== LAYOUT ===== */
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  /* ===== SUBJECT SECTION ===== */
+  .subject-section {
+    margin-bottom: 64px;
+  }
+  .subject-header {
+    background: linear-gradient(135deg, var(--card2), var(--card));
+    border: 1px solid var(--border);
+    border-right: 5px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 26px 28px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  .subject-header::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .subject-num {
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .subject-header h2 {
+    font-size: clamp(20px, 3vw, 28px);
+    color: var(--gold2);
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  /* ===== UNIT ===== */
+  .unit-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 26px 28px;
+    margin-bottom: 22px;
+  }
+  .unit-title {
+    font-size: 17px;
+    color: var(--blue);
+    font-weight: 700;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(126,184,247,0.2);
+  }
+  .unit-text {
+    color: var(--text);
+    margin-bottom: 14px;
+    line-height: 2.2;
+  }
+
+  /* ===== Q&A ===== */
+  .qa-block {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(111,207,138,0.2);
+    border-right: 4px solid var(--green);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 16px 0;
+  }
+  .qa-question {
+    color: var(--green);
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .qa-question::before {
+    content: 'س';
+    background: var(--green);
+    color: #000;
+    font-weight: 900;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+  .qa-answer {
+    color: #d4efdd;
+    line-height: 2.2;
+    padding-right: 16px;
+    border-right: 2px solid rgba(111,207,138,0.2);
+  }
+  .ans-label {
+    color: var(--green);
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  /* ===== BULLET POINTS ===== */
+  .point-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 14px;
+  }
+  .point-list li {
+    padding: 6px 0 6px 0;
+    padding-right: 20px;
+    position: relative;
+    color: var(--text);
+    line-height: 2.1;
+  }
+  .point-list li::before {
+    content: '◆';
+    color: var(--gold);
+    font-size: 9px;
+    position: absolute;
+    right: 0;
+    top: 11px;
+  }
+
+  /* ===== PRACTICE SECTION ===== */
+  .practice-section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 26px 28px;
+    margin-bottom: 22px;
+  }
+  .practice-title {
+    font-size: 18px;
+    color: var(--pink);
+    font-weight: 700;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(240,122,176,0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .practice-title .icon {
+    background: rgba(240,122,176,0.15);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--pink);
+  }
+
+  /* ===== FILL BLANKS ===== */
+  .fill-item {
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+  .fill-q {
+    color: var(--text);
+    margin-bottom: 6px;
+    font-size: 15px;
+  }
+  .fill-a {
+    color: var(--gold);
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .fill-a::before { content: '✔ جواب: '; color: var(--green); }
+
+  /* ===== TRUE FALSE ===== */
+  .tf-item {
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .tf-badge {
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-top: 4px;
+  }
+  .tf-true { background: rgba(111,207,138,0.2); color: var(--green); }
+  .tf-false { background: rgba(240,122,176,0.2); color: var(--pink); }
+  .tf-q { color: var(--text); font-size: 15px; line-height: 2; }
+  .tf-note { color: var(--muted); font-size: 13px; }
+
+  /* ===== SHORT DEF ===== */
+  .def-item {
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+  .def-q { color: var(--blue); font-weight: 700; margin-bottom: 6px; }
+  .def-a { color: var(--text); font-size: 15px; line-height: 2; }
+
+  /* ===== PREV PAPERS ===== */
+  .paper-section {
+    background: rgba(232,196,122,0.05);
+    border: 1px solid rgba(232,196,122,0.2);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-top: 10px;
+  }
+  .paper-year {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .paper-year::before {
+    content: '📋';
+    font-size: 16px;
+  }
+  .paper-q {
+    color: var(--text);
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    font-size: 15px;
+    display: flex;
+    gap: 8px;
+  }
+  .paper-q:last-child { border-bottom: none; }
+  .marks {
+    color: var(--pink);
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  /* ===== DIVIDER ===== */
+  .section-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 50px 0;
+  }
+
+  /* ===== TAGS / CHIPS ===== */
+  .topic-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0 16px;
+  }
+  .chip {
+    background: rgba(126,184,247,0.1);
+    border: 1px solid rgba(126,184,247,0.25);
+    color: var(--blue);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+  }
+
+  /* ===== HIGHLIGHT BOX ===== */
+  .highlight-box {
+    background: rgba(232,196,122,0.08);
+    border: 1px solid rgba(232,196,122,0.25);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .highlight-box p { color: var(--gold2); }
+
+  /* ===== ARTICLE LABEL ===== */
+  .article-tag {
+    display: inline-block;
+    background: rgba(126,184,247,0.15);
+    color: var(--blue);
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 2px 4px;
+  }
+
+  /* ===== MARK BADGE ===== */
+  .mark-badge {
+    background: rgba(240,122,176,0.15);
+    color: var(--pink);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  /* ===== SCROLLBAR ===== */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 30px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .footer span { color: var(--gold); }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .container { padding: 24px 14px; }
+    .unit-block, .practice-section { padding: 18px 16px; }
+    .subject-header { padding: 18px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="hero-badge">مہاراشٹر اردو بورڈ • D.El.Ed دوسرا سال • ۲۰۲۵-۲۶</div>
+  <h1>مکمل امتحانی مطالعہ مواد</h1>
+  <p>تمام ۸ مضامین کے نوٹس، سوالات، اور جوابات</p>
+  <div class="hero-subjects">
+    <span>S1 – ہندوستانی سماج اور تعلیم</span>
+    <span>S2 – اسکول کلچر اور قیادت</span>
+    <span>S3 – تعلیم کے نئے رجحانات</span>
+    <span>S4 – انگریزی زبان</span>
+    <span>S5 – ہندی تدریس</span>
+    <span>S6 – انگریزی تدریس</span>
+    <span>S7 – سائنس اور ریاضی تدریس</span>
+    <span>S8 – سماجی علوم تدریس</span>
+  </div>
+</div>
+
+<!-- ===== NAV ===== -->
+<nav class="nav-bar">
+  <div class="nav-inner">
+    <a href="#s1">S1 – سماج اور تعلیم</a>
+    <a href="#s2">S2 – اسکول مینجمنٹ</a>
+    <a href="#s3">S3 – نئے رجحانات</a>
+    <a href="#s5">S5 – ہندی تدریس</a>
+    <a href="#s7">S7 – سائنس و ریاضی</a>
+    <a href="#s8">S8 – سماجی علوم</a>
+    <a href="#practice">مشق کے سوالات</a>
+  </div>
+</nav>
+
+<div class="container">
+
+<!-- ============================================================ -->
+<!-- S1 – INDIAN SOCIETY AND EDUCATION -->
+<!-- ============================================================ -->
+<div class="subject-section" id="s1">
+  <div class="subject-header">
+    <div class="subject-num">مضمون اول • S1</div>
+    <h2>ہندوستانی سماج اور تعلیم</h2>
+  </div>
+
+  <!-- Unit 1 -->
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۱: تعلیم کی سماجی بنیادیں</div>
+    <div class="unit-text">
+      تعلیم کسی خلا میں نہیں ہوتی — یہ گہرے طور پر اس سماج سے جڑی ہوتی ہے جس میں وہ انجام پاتی ہے۔ ہندوستانی سماج دنیا کے سب سے متنوع سماجوں میں سے ایک ہے۔
+    </div>
+    <ul class="point-list">
+      <li>تنوع میں وحدت — سیکڑوں زبانیں اور مذاہب ایک ساتھ</li>
+      <li>ذات پات کا نظام — سماجی درجہ بندی کا تاریخی ڈھانچہ</li>
+      <li>مذہبی تنوع — ہندو، اسلام، عیسائیت، سکھ، بدھ، جین اور دیگر</li>
+      <li>لسانی تنوع — ۲۲ درج فہرست زبانیں، سیکڑوں بولیاں</li>
+      <li>دیہی-شہری فرق — ۶۵٪ ہندوستانی اب بھی دیہات میں رہتے ہیں</li>
+      <li>صنفی عدم مساوات — تعلیم، روزگار، اور سماجی آزادی میں فرق</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">ہندوستانی سماج کی سماجی خصوصیات کیا ہیں؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        ہندوستانی سماج اپنے غیر معمولی تنوع سے پہچانا جاتا ہے۔ یہاں سیکڑوں زبانیں ہیں — ۲۲ سرکاری درج شدہ — اور دنیا کے تمام بڑے مذاہب موجود ہیں۔ ذات پات نے تاریخی طور پر سماج کو سخت درجہ بندیوں میں تقسیم کیا، حالانکہ آئین نے ذات پات کی تفریق کو ختم کر دیا۔ ہندوستان میں دیہی-شہری فرق گہرا ہے — زیادہ تر ہندوستانی محدود سہولیات والے دیہات میں رہتے ہیں۔ صنفی عدم مساوات ایک چیلنج ہے — لڑکیوں کو کم داخلہ، جلد شادی، اور محدود کیریئر کے مواقع کا سامنا ہے۔
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-question">سماج اور تعلیم کے تعلق کی وضاحت کریں۔</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        سماج اور تعلیم آپس میں ناقابلِ علیحدگی طور پر جڑے ہوئے ہیں۔ سماج تعلیم کو شکل دیتا ہے — جو مضامین ہم پڑھاتے ہیں، جو زبانیں استعمال کرتے ہیں، اور جو اقدار کو فروغ دیتے ہیں — سب اس سماج کا عکس ہیں جس میں ہم رہتے ہیں۔ تعلیم بدلے میں سماج کو شکل دیتی ہے — وہ ایسے شہری تیار کرتی ہے جو تنقیدی سوچ رکھیں اور جمہوری طور پر حصہ لے سکیں۔ ہندوستان میں تعلیم کو سماجی تبدیلی کے آلے کے طور پر استعمال کیا گیا ہے۔
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit 2 -->
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۲: تعلیم کے لیے آئینی احکام</div>
+    <div class="unit-text">ہندوستانی آئین تعلیم کے لیے قانونی بنیاد فراہم کرتا ہے۔</div>
+    <ul class="point-list">
+      <li><span class="article-tag">آرٹیکل ۲۱A</span> — حقِ تعلیم (۶ تا ۱۴ سال)</li>
+      <li><span class="article-tag">آرٹیکل ۴۵</span> — ریاست ۶ سال سے کم بچوں کی ابتدائی نگہداشت کرے</li>
+      <li><span class="article-tag">آرٹیکل ۴۶</span> — SC/ST اور کمزور طبقوں کی تعلیمی مفادات کا تحفظ</li>
+      <li><span class="article-tag">آرٹیکل ۲۹-۳۰</span> — اقلیتی تعلیمی حقوق کا تحفظ</li>
+      <li><span class="article-tag">۸۶واں آئینی ترمیم (۲۰۰۲)</span> — آرٹیکل ۲۱A کا اضافہ</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">۸۶ویں آئینی ترمیم کی اہمیت کیا ہے؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        ۸۶ویں آئینی ترمیم (۲۰۰۲) تاریخی تھی — اس نے آرٹیکل ۲۱A کو آئین کے حصہ سوم (بنیادی حقوق) میں شامل کیا، جس سے ۶ سے ۱۴ سال کے بچوں کی تعلیم ایک بنیادی حق بن گئی۔ اس سے پہلے تعلیم صرف ایک ہدایتی اصول (ناقابلِ نفاذ) تھی۔ ۲۰۰۲ کے بعد، حکومت آئینی طور پر مفت اور لازمی تعلیم فراہم کرنے کی پابند ہو گئی۔ اس ترمیم نے براہِ راست حقِ تعلیم قانون ۲۰۰۹ کو جنم دیا۔
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit 3 -->
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۳: ذات پات، طبقہ اور تعلیم</div>
+    <div class="unit-text">
+      ذات پات ہندوستانی سماجی درجہ بندی کی سب سے نمایاں خصوصیت ہے۔ روایتی ورنا نظام نے سماج کو برہمن (پجاری)، کشتریہ (جنگجو)، ویشیہ (تاجر)، اور شودر (مزدور) میں تقسیم کیا۔
+    </div>
+    <ul class="point-list">
+      <li>تاریخی طور پر نچلی ذاتوں اور خواتین کو تعلیم سے محروم رکھا گیا</li>
+      <li>آزادی کے بعد SC (۱۵٪)، ST (۷.۵٪)، OBC (۲۷٪) کے لیے ریزرویشن</li>
+      <li>مڈ ڈے میل اسکیم، مفت درسی کتب، اسکالرشپ — پسماندہ طبقوں کے لیے</li>
+      <li>ڈاکٹر بی آر امبیڈکر — ذات پات سے تعلیم کی طاقت سے اوپر اٹھنے کی علامت</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">ڈاکٹر بی آر امبیڈکر کا تعلیم کے فروغ میں کیا کردار تھا؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        ڈاکٹر بی آر امبیڈکر ہندوستان میں تعلیم کو نجات کا ذریعہ بنانے کی سب سے طاقتور علامت ہیں۔ دلت برادری میں پیدا ہونے کے باوجود انہوں نے کولمبیا یونیورسٹی اور لندن اسکول آف اکنامکس سے ڈاکٹریٹ کی ڈگریاں حاصل کیں۔ وہ ہندوستانی آئین کے معمار بنے، جس میں اچھوت پن کا خاتمہ (آرٹیکل ۱۷)، بنیادی حقوق، اور پسماندہ طبقوں کے لیے ریزرویشن شامل کیے۔ انہوں نے کہا: "تعلیم شیرنی کا دودھ ہے — جو اسے پیے گا وہ دہاڑے گا۔"
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit 4 -->
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۴: صنف اور تعلیم</div>
+    <ul class="point-list">
+      <li>خواتین کی شرح خواندگی ۸٪ (۱۹۴۷) سے بڑھ کر ۷۰٪ سے زیادہ (۲۰۱۱) ہو گئی</li>
+      <li>لڑکیاں خصوصاً دیہی علاقوں میں کلاس ۵ کے بعد اسکول چھوڑ دیتی ہیں</li>
+      <li>اسکول چھوڑنے کی وجوہات: جلد شادی، اسکول کا فاصلہ، لڑکوں کو ترجیح، گھریلو ذمہ داریاں</li>
+    </ul>
+    <div class="highlight-box">
+      <p><strong>حکومتی اسکیمیں:</strong> بیٹی بچاؤ بیٹی پڑھاؤ • کستوربا گاندھی بالیکا ودیالیہ • مڈ ڈے میل اسکیم • ثانوی تعلیم میں لڑکیوں کے لیے قومی ترغیب اسکیم</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-question">قومی ترقی کے لیے خواتین کی تعلیم کی اہمیت کیا ہے؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        خواتین کو تعلیم دینا کسی قوم کی سب سے طاقتور سرمایہ کاری ہے۔ تحقیق سے ثابت ہے کہ ایک تعلیم یافتہ عورت زیادہ کماتی ہے، دیر سے شادی کرتی ہے، کم اور صحت مند بچے پیدا کرتی ہے، اور اپنی بیٹیوں کو تعلیم دینے کا زیادہ امکان رکھتی ہے — یہ ایک مثبت نسل در نسل سلسلہ بناتا ہے۔ NEP 2020 صنفی مساوات کو ہندوستان کے لیے ۲۰۳۰ تک ۱۰۰٪ GER حاصل کرنے کی شرط قرار دیتی ہے۔
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit 5 -->
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۵: آدیواسی تعلیم</div>
+    <ul class="point-list">
+      <li>ہندوستان میں ۷۰۰ سے زیادہ قبائلی (آدیواسی) گروہ — آبادی کا تقریباً ۸٪</li>
+      <li>چیلنجز: دور دراز بستیاں، مادری زبان کا مسئلہ، غربت، اسکول کا کوئی تعلق نہیں</li>
+      <li>ایکلویہ ماڈل رہائشی اسکول (EMRS) — ST طلبا کے لیے معیاری رہائشی اسکول</li>
+      <li>NEP 2020 — مادری زبان میں تعلیم اور مقامی علم کا احترام</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">ایکلویہ ماڈل رہائشی اسکول کیا ہیں؟ ان کی اہمیت کیا ہے؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        ایکلویہ ماڈل رہائشی اسکول (EMRS) حکومت کی طرف سے مالی اعانت یافتہ معیاری رہائشی اسکول ہیں جو خاص طور پر دور دراز قبائلی علاقوں میں ST طلبا کے لیے بنائے گئے ہیں۔ وزارتِ قبائلی امور کے تحت قائم، وہ نووادیہ ودیالیوں کے مساوی تعلیم فراہم کرتے ہیں۔ ہر EMRS میں کلاس ۶ سے ۱۲ تک کے قبائلی طلبا کے لیے ہوسٹل، کھیل کا میدان، کمپیوٹر لیب، اور لائبریری — سب مفت — موجود ہیں۔
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit 6 -->
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۶: اقلیتی تعلیم</div>
+    <ul class="point-list">
+      <li>آرٹیکل ۲۹-۳۰: اقلیتی تعلیمی حقوق کا تحفظ</li>
+      <li>سچر کمیٹی رپورٹ (۲۰۰۶): مسلم تعلیمی حالت قومی اوسط سے کہیں نیچے</li>
+      <li>حکومتی اقدامات: مدرسوں کی جدید کاری، مولانا آزاد قومی فیلوشپ، اقلیتی اسکالرشپ</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">سچر کمیٹی رپورٹ نے مسلم تعلیم کے بارے میں کیا انکشاف کیا؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        سچر کمیٹی رپورٹ (۲۰۰۶)، حکومتِ ہند کی طرف سے مقرر کردہ، ہندوستانی مسلمانوں کی سماجی اقتصادی حالت کا ایک اہم مطالعہ تھا۔ تعلیم میں رپورٹ نے تشویشناک فرق ظاہر کیے: مسلم خواندگی کی شرح قومی اوسط سے بہت کم تھی، مسلم ڈراپ آؤٹ کی شرح سب سے زیادہ تھی، اعلیٰ تعلیم اور سرکاری خدمات میں مسلم نمائندگی غیر متناسب طور پر کم تھی۔ اس رپورٹ نے اقلیتوں کی فلاح کے لیے وزیراعظم کے ۱۵ نکاتی پروگرام کو جنم دیا۔
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit 7 -->
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۷: تعلیم اور سماجی تبدیلی</div>
+    <ul class="point-list">
+      <li>مہاتما گاندھی — نئی تعلیم (نئی تعلیم) — پیداواری کام اور اقدار کے ذریعے تعلیم</li>
+      <li>ڈاکٹر بی آر امبیڈکر — ذات پات کے ظلم سے نجات کا ذریعہ</li>
+      <li>رابندرناتھ ٹیگور — خوشی بھری، فطرت اور برادری سے جڑی تعلیم</li>
+      <li>کوٹھاری کمیشن (۱۹۶۴-۶۶) — "ہندوستان کی تقدیر اس کی کلاس رومز میں بن رہی ہے"</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">گاندھی کی نئی تعلیم کا تصور کیا تھا؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        نئی تعلیم (بنیادی تعلیم) مہاتما گاندھی کا انقلابی تعلیمی فلسفہ تھا، جو ۱۹۳۷ میں پیش کیا گیا۔ گاندھی کا متبادل: تعلیم ایک پیداواری ہنر (جیسے کپاس کاتنا، کھیتی، یا بڑھئی گری) کے گرد استوار ہو — بچے عملی سرگرمی کے ذریعے تمام مضامین سیکھیں۔ تعلیم مادری زبان میں ہو۔ یہ پورے انسان کو ترقی دے — جسم، ذہن، اور روح۔ یہ مقامی برادری اور سماجی ضروریات سے جڑی ہو۔ NEP 2020 کا کلاس ۶ سے پیشہ ورانہ تعلیم پر زور گاندھی کی نئی تعلیم کی گونج ہے۔
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit 8 -->
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۸: تعلیم اور قومی یکجہتی</div>
+    <ul class="point-list">
+      <li>مشترک نصاب — مشترک تاریخ، آئین اور قومی علامات پڑھانا</li>
+      <li>تین زبانوں کا فارمولا (مادری زبان + ہندی + انگریزی)</li>
+      <li>ہم نصابی سرگرمیاں — کھیل، ثقافتی تہوار، NCC، NSS</li>
+      <li>اقدار کی تعلیم — سیکولرازم، جمہوریت، اخوت</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">تین زبانوں کا فارمولا کیا ہے؟ یہ کیوں اہم ہے؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        تین زبانوں کا فارمولا کوٹھاری کمیشن (۱۹۶۴-۶۶) نے تجویز کیا اور قومی تعلیم کی پالیسی (۱۹۶۸) نے اپنایا۔ اس کے مطابق طلبا تین زبانیں سیکھیں: علاقائی زبان یا مادری زبان (تعلیم کا ذریعہ)، ہندی (قومی ربط کی زبان)، اور انگریزی (بین الاقوامی زبان)۔ اہمیت: علاقائی زبانوں کو محفوظ رکھتا ہے، ہندی کو ربط کی زبان کے طور پر فروغ دیتا ہے، اور انگریزی کے ذریعے عالمی تعلق قائم کرتا ہے۔ NEP 2020 نے اسے برقرار رکھا۔
+      </div>
+    </div>
+  </div>
+
+  <!-- Previous Papers S1 -->
+  <div class="practice-section">
+    <div class="practice-title"><span class="icon">📋</span> پچھلے امتحانی سوالات — S1</div>
+    <div class="paper-section">
+      <div class="paper-year">جنوری ۲۰۲۱</div>
+      <div class="paper-q"><span>۱.</span><span>ہندوستانی تعلیم کی سماجی بنیادیں کیا ہیں؟ ذات پات کے تعلیم پر اثرات بیان کریں۔</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۲.</span><span>ہندوستان میں تعلیم سے متعلق آئینی احکام کی وضاحت کریں۔</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۳.</span><span>نئی تعلیم کیا ہے؟ گاندھی کے تعلیمی خیالات بیان کریں۔</span><span class="marks">۵ نمبر</span></div>
+      <div class="paper-q"><span>۴.</span><span>قومی یکجہتی کیا ہے؟ تعلیم اسے کیسے فروغ دے سکتی ہے؟</span><span class="marks">۵ نمبر</span></div>
+      <div class="paper-q"><span>۵.</span><span>ہندوستان میں آدیواسی تعلیم کے چیلنجز بیان کریں۔</span><span class="marks">۵ نمبر</span></div>
+    </div>
+    <div class="paper-section">
+      <div class="paper-year">جنوری ۲۰۲۳</div>
+      <div class="paper-q"><span>۱.</span><span>ذات پات، طبقہ، اور صنف کو ہندوستان میں تعلیم کی رکاوٹ کے طور پر بیان کریں۔</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۲.</span><span>سماجی تبدیلی میں تعلیم کا کردار کیا ہے؟ مثالوں کے ساتھ وضاحت کریں۔</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۳.</span><span>سچر کمیٹی رپورٹ کیا تھی؟ اس نے کیا انکشاف کیا؟</span><span class="marks">۵ نمبر</span></div>
+    </div>
+    <div class="paper-section">
+      <div class="paper-year">جون ۲۰۲۴</div>
+      <div class="paper-q"><span>۱.</span><span>تعلیم سے متعلق آئینی احکام بیان کریں — آرٹیکل ۲۱A، ۴۵، ۴۶، ۲۹، ۳۰۔</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۲.</span><span>تعلیم قومی یکجہتی میں کیسے حصہ ڈالتی ہے؟ تین زبانوں کے فارمولے کا کردار بتائیں۔</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۳.</span><span>ایکلویہ ماڈل رہائشی اسکول کیا ہیں؟</span><span class="marks">۵ نمبر</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ============================================================ -->
+<!-- S2 – SCHOOL CULTURE, MANAGEMENT, LEADERSHIP -->
+<!-- ============================================================ -->
+<div class="subject-section" id="s2">
+  <div class="subject-header">
+    <div class="subject-num">مضمون دوم • S2</div>
+    <h2>اسکول کلچر، مینجمنٹ، قیادت اور تبدیلی</h2>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۱: اسکول کلچر</div>
+    <div class="unit-text">اسکول کلچر مشترکہ اقدار، عقائد، اصولوں، روایات، اور طریقوں کا مجموعہ ہے جو یہ طے کرتا ہے کہ ایک اسکولی برادری کیسے سوچتی، محسوس کرتی، اور عمل کرتی ہے۔</div>
+    <ul class="point-list">
+      <li>مثبت اسکول کلچر: مشترکہ نصب العین، اعلیٰ توقعات، باہمی تعاون کی تعلیم</li>
+      <li>منفی اسکول کلچر: کم توقعات، دھمکانا، ڈر پر مبنی انتظام</li>
+      <li>کلچر کیسے بنتا ہے: روزانہ کی رسومات، قائدانہ رویے، کامیابی کی کہانیاں</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">صبح کی اسمبلی اسکول کلچر کی تعمیر میں کیسے حصہ ڈالتی ہے؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        صبح کی اسمبلی ایک طاقتور روزانہ کی رسم ہے جو اسکول کلچر کو تعمیر کرتی ہے۔ قومی ترانہ حب الوطنی کی شناخت بناتا ہے۔ عہد آئینی اقدار کو تقویت دیتا ہے۔ آج کی سوچ اخلاقی سوچ کو فروغ دیتی ہے۔ طلبا کی پرفارمنس اعتماد پیدا کرتی ہے۔ اسمبلی محض ایک رسم نہیں — جب اسے حقیقی معنویت کے ساتھ کیا جائے تو یہ اشتراکی شناخت، مشترکہ اقدار، اور تعلق کا احساس پیدا کرتی ہے۔
+      </div>
+    </div>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۲: اسکول مینجمنٹ</div>
+    <div class="unit-text">اسکول مینجمنٹ کا مطلب ہے تمام اسکولی سرگرمیوں کی منظم منصوبہ بندی، تنظیم، رہنمائی، اور کنٹرول تاکہ تعلیمی اہداف مؤثر طریقے سے حاصل کیے جا سکیں۔</div>
+    <ul class="point-list">
+      <li>SMC (اسکول مینجمنٹ کمیٹی) — RTE 2009 کے تحت ہر سرکاری اسکول میں لازمی</li>
+      <li>SMC کے ۷۵٪ ارکان والدین ہونے چاہئیں</li>
+      <li>SMC اسکول ڈویلپمنٹ پلان (SDP) تیار کرتی ہے</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">RTE 2009 کے تحت اسکول مینجمنٹ کمیٹی (SMC) کیا ہے؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        SMC ہر سرکاری اور سرکاری اعانت یافتہ اسکول کے لیے RTE قانون ۲۰۰۹ کے تحت لازمی ادارہ ہے۔ ساخت: ۷۵٪ ارکان اسکول میں داخل بچوں کے والدین ہوں۔ باقی ۲۵٪ اساتذہ، مقامی حکام، منتخب نمائندے ہو سکتے ہیں۔ SMC کے کام: اسکول ڈویلپمنٹ پلان (SDP) تیار کرنا، اسکول کے کام کی نگرانی، حاضری، درس کا معیار، مڈ ڈے میل۔ SMC ڈیزائن کا مقصد برادریوں کو ان کے اسکولوں کی براہِ راست ملکیت دینا ہے۔
+      </div>
+    </div>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۳: تعلیمی قیادت کی اقسام</div>
+    <ul class="point-list">
+      <li><strong>تعلیمی قیادت (Instructional):</strong> درس و تدریس کو بہتر بنانا — کلاسز دیکھنا، تاثرات دینا</li>
+      <li><strong>تبدیلی کی قیادت (Transformational):</strong> مشترکہ نصب العین کو الہام دینا</li>
+      <li><strong>تقسیم شدہ قیادت (Distributed):</strong> اساتذہ، طلبا، برادری میں قیادت کا اشتراک</li>
+      <li><strong>خادمانہ قیادت (Servant):</strong> قائد کا کردار اساتذہ اور طلبا کی خدمت کرنا ہے</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">ایک اچھے اسکول لیڈر کی کیا خصوصیات ہونی چاہئیں؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        ایک اچھے اسکول لیڈر میں یہ خصوصیات ہونی چاہئیں: واضح، الہام بخش نصب العین اور اسے ہر ایک تک پہنچانے کی صلاحیت۔ مضبوط مواصلاتی مہارت — سننا اور بولنا، والدین، اساتذہ، طلبا کے لیے قابلِ رسائی۔ ہمدردی — اساتذہ اور طلبا کے چیلنجز کو سمجھنا۔ اعلیٰ توقعات — یہ یقین کہ ہر بچہ سیکھ سکتا ہے۔ منصفانہ اور مستقل فیصلہ سازی۔ تاثرات کے لیے کھلے پن — تنقید کو معلومات سمجھنا، خطرہ نہیں۔ ہمت — مشکل گفتگو کرنے اور ناپسندیدہ فیصلے لینے کی صلاحیت۔
+      </div>
+    </div>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۴: اسکول کی تبدیلی — اقدامات</div>
+    <ul class="point-list">
+      <li>تشخیص — موجودہ صورتحال کو ایمانداری سے سمجھنا</li>
+      <li>نصب العین — اس اسکول کی کامیابی کیسی دکھتی ہے؟</li>
+      <li>منصوبہ بندی — اسکول ڈویلپمنٹ پلان (SDP)</li>
+      <li>عمل — تبدیلیوں کو منظم طریقے سے نافذ کرنا</li>
+      <li>نگرانی — ڈیٹا کے ساتھ پیشرفت کو ٹریک کرنا</li>
+      <li>عکاسی — کیا کام کر رہا ہے، کیا نہیں؟</li>
+      <li>جشن — ہر بہتری کو تسلیم کرنا</li>
+    </ul>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۵: استاد کی پیشہ ورانہ ترقی</div>
+    <ul class="point-list">
+      <li>DIET (ضلعی تعلیم و تربیت کا ادارہ) — اساتذہ کی تربیت</li>
+      <li>BRC (بلاک ریسورس سنٹر) اور CRC (کلسٹر ریسورس سنٹر)</li>
+      <li>DIKSHA — ڈیجیٹل انفراسٹرکچر برائے علم کا اشتراک</li>
+      <li>NPST — قومی پیشہ ورانہ معیارات برائے اساتذہ (NEP 2020)</li>
+      <li>NEP 2020: ہر سال ۵۰ گھنٹے CPD (مسلسل پیشہ ورانہ ترقی) لازمی</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">DIET کیا ہے؟ اساتذہ کی تعلیم میں اس کا کیا کردار ہے؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        DIET کا مطلب ہے ضلعی تعلیم و تربیت کا ادارہ (District Institute of Education and Training)۔ مہاراشٹر کے ہر ضلع میں ایک DIET ہے جو اسکول میں خدمت دینے والے اساتذہ اور ہیڈ ماسٹرز کی پیشہ ورانہ ترقی کا ذمہ دار ہے۔ DIET کے کردار: اسکول میں خدمت اساتذہ کے لیے تربیت، درس کے مواد تیار کرنا، ایکشن ریسرچ کرنا، BRCs اور CRCs کو معاونت فراہم کرنا، D.El.Ed پری سروس تربیت۔ NEP 2020 کے تحت، DIETs کو اپ گریڈ کرکے تعلیمی عمدگی کے مراکز بنانا ہے۔
+      </div>
+    </div>
+  </div>
+
+  <!-- Previous Papers S2 -->
+  <div class="practice-section">
+    <div class="practice-title"><span class="icon">📋</span> پچھلے امتحانی سوالات — S2</div>
+    <div class="paper-section">
+      <div class="paper-year">جنوری ۲۰۲۳</div>
+      <div class="paper-q"><span>۱.</span><span>تعلیمی قیادت کی اقسام کو مثالوں کے ساتھ بیان کریں۔</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۲.</span><span>اسکول ڈویلپمنٹ پلان کیا ہے؟ یہ کیسے تیار کیا جاتا ہے؟</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۳.</span><span>DIET کیا ہے؟ اس کے کام کیا ہیں؟</span><span class="marks">۵ نمبر</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ============================================================ -->
+<!-- S3 – NEW TRENDS -->
+<!-- ============================================================ -->
+<div class="subject-section" id="s3">
+  <div class="subject-header">
+    <div class="subject-num">مضمون سوم • S3</div>
+    <h2>تعلیم کے نئے رجحانات</h2>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اہم موضوعات</div>
+    <div class="topic-chips">
+      <span class="chip">RTE قانون ۲۰۰۹</span>
+      <span class="chip">NEP 2020 (5+3+3+4)</span>
+      <span class="chip">جامع تعلیم</span>
+      <span class="chip">ICT تعلیم میں</span>
+      <span class="chip">اقدار کی تعلیم</span>
+      <span class="chip">ماحولیاتی تعلیم</span>
+      <span class="chip">ایکشن ریسرچ</span>
+      <span class="chip">CCE</span>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-question">حقِ تعلیم قانون ۲۰۰۹ کیا ہے؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        RTE قانون ۲۰۰۹ ہر ۶-۱۴ سال کے بچے کو آرٹیکل ۲۱A کے تحت مفت اور لازمی تعلیم کا بنیادی حق دیتا ہے۔ اہم احکام:
+        تمام ۶-۱۴ سال کے بچوں کے لیے مفت تعلیم • نجی اسکولوں میں EWS کے لیے ۲۵٪ ریزرویشن • کلاس ۸ تک نو ڈیٹینشن پالیسی • جسمانی سزا کی ممانعت • PTR ۳۰:۱ (کلاس I-V) • SMC لازمی • ۱ اپریل ۲۰۱۰ سے نافذ۔
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-question">NEP 2020 کیا ہے؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        NEP 2020 کو ۲۹ جولائی ۲۰۲۰ کو منظور کیا گیا۔ نئی ساخت 5+3+3+4 نے پرانی 10+2 کی جگہ لی۔ اہم نکات: کلاس ۵ تک مادری زبان میں تعلیم • FLN مشن (بنیادی خواندگی و عددیت) • کلاس ۶ سے پیشہ ورانہ تعلیم • جامع رپورٹ کارڈ • ۴ سالہ یکجا B.Ed • NPST • CPD لازمی • ۲۰۳۰ تک ۱۰۰٪ GER • تعلیم کے لیے GDP کا ۶٪۔
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ============================================================ -->
+<!-- S5 – HINDI PEDAGOGY -->
+<!-- ============================================================ -->
+<div class="subject-section" id="s5">
+  <div class="subject-header">
+    <div class="subject-num">مضمون پنجم • S5</div>
+    <h2>دوسری زبان (ہندی) کی تدریس</h2>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۱: زبان اور زبان سیکھنے کی نوعیت</div>
+    <ul class="point-list">
+      <li>L1 (پہلی زبان) — مادری زبان — پیدائش سے گھر میں فطری طریقے سے سیکھی جاتی ہے</li>
+      <li>L2 (دوسری زبان) — اسکول میں باشعور کوشش سے سیکھی جاتی ہے</li>
+      <li>مادری زبان کی مداخلت — اردو کے اصول ہندی میں لاگو کرنا</li>
+      <li>اردو طلبا کا فائدہ: مشترکہ الفاظ • چیلنج: مختلف رسم الخط (دیوناگری بمقابلہ نستعلیق)</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">مادری زبان کی مداخلت کیا ہے؟ ہندی استاد کو اسے کیسے سنبھالنا چاہیے؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        مادری زبان کی مداخلت اس وقت ہوتی ہے جب سیکھنے والا اپنی پہلی زبان کے قواعد، تلفظ، الفاظ، یا رسم الخط کے اصولوں کو دوسری زبان پر لاگو کرتا ہے۔ اردو میڈیم طلبا کے لیے ہندی سیکھتے وقت: رسم الخط کی مداخلت — اردو دائیں سے بائیں لکھی جاتی ہے؛ ہندی بائیں سے دائیں۔ الفاظ کی مداخلت — اردو میں عربی-فارسی الفاظ ہیں جبکہ ہندی میں سنسکرت۔ ایک اچھا ہندی استاد اسے تعمیری طور پر سنبھالے — مشترکہ الفاظ پر استوار کرے، دیوناگری رسم الخط صبر سے سکھائے، اور مادری زبان کو کبھی شرمندگی کا باعث نہ بنائے۔
+      </div>
+    </div>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۲: ہندی میں چار مہارتیں — LSRW</div>
+    <ul class="point-list">
+      <li><strong>سننا (Sunna):</strong> ہندی کہانیاں، گانے، مکالمے سننا</li>
+      <li><strong>بولنا (Bolna):</strong> رول پلے، زبانی سوالات، کہانی سنانا</li>
+      <li><strong>پڑھنا (Padhna):</strong> دیوناگری میں عبارات، نظمیں پڑھنا</li>
+      <li><strong>لکھنا (Likhna):</strong> املا، انشا، خط لکھنا</li>
+    </ul>
+    <div class="highlight-box">
+      <p><strong>دیوناگری سکھانے کا ترتیب:</strong> سوار (حروفِ علت) ← ویانجن (حروفِ صحیح) ← ماترائیں ← سنیکت اکشر ← جملے</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-question">اردو میڈیم طلبا کو دیوناگری رسم الخط کیسے سکھائیں؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        اردو میڈیم طلبا کو دیوناگری سکھانے کے لیے صبر، منظم ترقی، اور جو طلبا پہلے سے جانتے ہیں اس پر استوار کرنا ضروری ہے۔ ترتیب: پہلے حروفِ علت سکھائیں — پھر حروفِ صحیح — پھر ماترائیں — پھر الفاظ — پھر جملے۔ اہم حکمت عملیاں: اردو رسم الخط سے موازنہ کریں۔ حروف کے ساتھ تصاویر استعمال کریں۔ فلیش کارڈز، ٹریسنگ، اور لکھنے کی مشق کریں۔ دیوناگری میں پہلے صحیح لکھے جملے کو کبھی سنسکرت کو اردو سے کم نہ سمجھیں — دونوں خوبصورت رسم الخط ہیں۔
+      </div>
+    </div>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۳: ہندی پڑھانے کے طریقے</div>
+    <ul class="point-list">
+      <li><strong>براہِ راست طریقہ (Direct Method):</strong> صرف ہندی، مادری زبان نہیں — زبانی روانی پیدا کرتا ہے</li>
+      <li><strong>دو لسانی طریقہ (Bilingual Method):</strong> اردو میں وضاحت — ابتدائی مرحلے میں مفید</li>
+      <li><strong>قواعد ترجمہ طریقہ (GTM):</strong> پڑھنے کے لیے اچھا لیکن بولنے کے لیے کمزور</li>
+      <li><strong>مواصلاتی نقطہ نظر (CLT):</strong> حقیقی مواصلات پر توجہ — سب سے مؤثر</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">اردو میڈیم طلبا کو ہندی پڑھانے کے لیے براہِ راست اور دو لسانی طریقے کا موازنہ کریں۔</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        <strong>براہِ راست طریقہ:</strong> کلاس میں صرف ہندی استعمال ہوتی ہے۔ معنی تصاویر، حرکات، اور اشیاء کے ذریعے دیے جاتے ہیں۔ فائدہ: طلبا ہندی میں سوچنے پر مجبور ہوتے ہیں۔ نقصان: ابتدائی سطح پر الجھن ہو سکتی ہے۔ <strong>دو لسانی طریقہ:</strong> استاد مشکل الفاظ، قواعد اردو میں سمجھاتا ہے۔ فائدہ: طلبا کا اعتماد قائم رہتا ہے۔ نقصان: طلبا اردو ترجمہ پر انحصار کر سکتے ہیں۔ <strong>بہترین عمل:</strong> ابتدائی مراحل میں دو لسانی طریقہ، پھر بتدریج براہِ راست طریقے کی طرف۔
+      </div>
+    </div>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۴: ہندی ادب پڑھانا</div>
+    <ul class="point-list">
+      <li><strong>نظم پڑھانے کے مراحل:</strong> تعارف ← استاد کا پڑھنا ← اجتماعی پڑھائی ← وضاحت ← تعریف ← ازبر کرنا</li>
+      <li>اہم ہندی شعراء: کبیر داس (دوہے)، تلسی داس (رام چرت مانس)، سور داس، میرا بائی</li>
+      <li>محاورے (Muhavare) — اصطلاحات: الفاظ کا لفظی معنی مختلف ہوتا ہے</li>
+      <li>کہاوتیں (Kahavaten) — ضرب الامثال: مختصر روایتی حکمت</li>
+    </ul>
+  </div>
+
+  <!-- Previous Papers S5 -->
+  <div class="practice-section">
+    <div class="practice-title"><span class="icon">📋</span> پچھلے امتحانی سوالات — S5</div>
+    <div class="paper-section">
+      <div class="paper-year">جنوری ۲۰۲۱</div>
+      <div class="paper-q"><span>۱.</span><span>L1 اور L2 سیکھنے میں کیا فرق ہے؟</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۲.</span><span>اردو میڈیم طلبا کو دیوناگری رسم الخط کیسے سکھائیں؟</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۳.</span><span>ہندی پڑھانے کا براہِ راست طریقہ کیا ہے؟</span><span class="marks">۵ نمبر</span></div>
+      <div class="paper-q"><span>۴.</span><span>کلاس ۴ کو ہندی نظم کیسے پڑھائیں؟</span><span class="marks">۵ نمبر</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ============================================================ -->
+<!-- S7 – SCIENCE AND MATHEMATICS PEDAGOGY -->
+<!-- ============================================================ -->
+<div class="subject-section" id="s7">
+  <div class="subject-header">
+    <div class="subject-num">مضمون ہفتم • S7</div>
+    <h2>سائنس اور ریاضی کی تدریس</h2>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۱: سائنس کی نوعیت اور تعلیم میں اس کا مقام</div>
+    <ul class="point-list">
+      <li>سائنس مشاہدے، تجربے، اور ثبوت پر مبنی منظم طریقہ ہے</li>
+      <li>سائنس کی نوعیت: تجربی، عارضی، خود اصلاح کرنے والی، آفاقی، تخلیقی</li>
+      <li><span class="article-tag">آرٹیکل ۵۱A(h)</span> — ہر شہری کا فرض ہے کہ سائنسی مزاج پیدا کرے</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">سائنسی مزاج کیا ہے؟ استاد اسے طلبا میں کیسے پیدا کر سکتا ہے؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        سائنسی مزاج کا مطلب سائنسی انداز میں سوچنے کی عادت ہے — مفروضات پر سوال اٹھانا، ثبوت کا مطالبہ کرنا، صرف وہی قبول کرنا جو جانچا جا سکے، اور ثبوت ملنے پر رائے بدلنا۔ آرٹیکل ۵۱A(h) اسے ہر ہندوستانی کا بنیادی فرض قرار دیتا ہے۔ استاد سائنسی مزاج پیدا کر سکتا ہے: سوالات کی حوصلہ افزائی کرکے، تجربات ڈیزائن کرکے، مشاہدے اور نتیجے میں فرق سکھاکر، توہمات کو احترام کے ساتھ ثبوت سے بدل کر، اور درست جواب کی طرح تجسس کو بھی سراہاکر۔
+      </div>
+    </div>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۲: سائنس پڑھانے کے طریقے</div>
+    <ul class="point-list">
+      <li><strong>سرگرمی پر مبنی طریقہ:</strong> طلبا ہاتھوں سے سرگرمیاں انجام دیتے ہیں</li>
+      <li><strong>مظاہرہ طریقہ:</strong> استاد تجربہ کرتا ہے جبکہ طلبا دیکھتے ہیں</li>
+      <li><strong>منصوبہ طریقہ:</strong> طلبا کئی ہفتوں تک سائنسی سوال کی تحقیق کرتے ہیں</li>
+      <li><strong>استفسار پر مبنی تعلیم:</strong> طلبا سائنسدانوں کی طرح تحقیق کرتے ہیں</li>
+      <li><strong>فیلڈ ٹرپ:</strong> فارم، دریا، سائنس سنٹر پر براہِ راست مشاہدہ</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">5E ماڈل کو مثال کے ساتھ بیان کریں۔</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        5E ماڈل ایک تعمیری سائنس تدریس فریم ورک ہے: <br/>
+        <strong>شامل کرنا (Engage):</strong> تجسس پیدا کریں — "روشنی کی طرف پودا کیوں موڑتا ہے؟" <br/>
+        <strong>دریافت کرنا (Explore):</strong> ہاتھوں سے تحقیق — دو ڈبوں میں بیج لگائیں، ایک روشنی میں ایک اندھیرے میں۔ <br/>
+        <strong>وضاحت (Explain):</strong> طلبا نتائج بیان کریں — پودا روشنی کی طرف جھکتا ہے کیونکہ اسے خوراک بنانے کے لیے روشنی چاہیے۔ <br/>
+        <strong>وسعت دینا (Elaborate):</strong> نئی صورتحال پر لاگو کریں — ڈبا گھمائیں تو کیا ہوگا؟ <br/>
+        <strong>جائزہ (Evaluate):</strong> سمجھ جانچیں — "اپنے الفاظ میں بیان کریں کیوں پودوں کو روشنی چاہیے۔"
+      </div>
+    </div>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۳: ریاضی کی نوعیت اور تدریس</div>
+    <ul class="point-list">
+      <li>ریاضی نمونوں، منطق، اور مقدار کی زبان ہے</li>
+      <li>ریاضی کی بے چینی (Maths Anxiety) — سیکھی جاتی ہے، پیدائشی نہیں</li>
+      <li>اچھا استاد محفوظ، معاون ماحول بناتا ہے جہاں غلطیاں سیکھنے کا موقع ہیں</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">CPA (Concrete-Pictorial-Abstract) نقطہ نظر کو ریاضی تدریس میں بیان کریں۔</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        CPA نقطہ نظر، جیروم برونر نے تیار کیا، ریاضی کے تصورات پڑھانے کا سب سے مؤثر ترتیب ہے۔ <br/>
+        <strong>ٹھوس مرحلہ (Concrete):</strong> طلبا جسمانی اشیاء کے ساتھ کام کرتے ہیں — بلاکس، گنتی کے ٹکڑے۔ مثال: 3+4 کے لیے 3 بلاک اور 4 بلاک رکھیں اور ملائیں۔ <br/>
+        <strong>تصویری مرحلہ (Pictorial):</strong> خاکوں کے ساتھ — 3 دائرے اور 4 دائرے بنائیں۔ <br/>
+        <strong>مجرد مرحلہ (Abstract):</strong> صرف علامات — 3 + 4 = 7۔ <br/>
+        یہ ترتیب یقینی بناتی ہے کہ مجرد علامات حقیقی فہم پر قائم ہوں — محض یادداشت پر نہیں۔
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-question">ریاضی کی بے چینی کیا ہے؟ ابتدائی استاد اسے کیسے روک سکتا ہے؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        ریاضی کی بے چینی خوف، تناؤ، اور بے بسی کا احساس ہے جو کچھ لوگوں کو ریاضی کرتے وقت ہوتا ہے۔ یہ کم ذہانت کی علامت نہیں — یہ ناکامی، ذلت، یا ضرورت سے زیادہ دباؤ کے تجربات کا سیکھا ہوا ردِ عمل ہے۔ استاد اسے روک سکتا ہے: غلط جوابات کا مذاق نہ اڑائیں۔ ہر کوشش کو سیکھنے کا موقع سمجھیں۔ ٹھوس مواد (Manipulatives) استعمال کریں۔ روزمرہ زندگی سے جوڑیں۔ وقت کے ٹیسٹ چھوٹے بچوں کے لیے استعمال نہ کریں۔ "میں ابھی نہیں جانتا" قابلِ قبول ہو۔
+      </div>
+    </div>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۴: ریاضی کی تعلیم کے طریقے</div>
+    <ul class="point-list">
+      <li><strong>سرگرمی پر مبنی:</strong> تکسیمی ٹائلز سے 1/2 = 2/4 سمجھنا</li>
+      <li><strong>مسئلہ حل کرنا:</strong> پہلے مسئلہ، پھر طریقہ</li>
+      <li><strong>دریافت طریقہ:</strong> طلبا خود نمونے اور اصول دریافت کرتے ہیں</li>
+      <li><strong>کھیل پر مبنی:</strong> پانسہ، تاش، بورڈ گیمز، ریاضی کے پہیلیاں</li>
+      <li><strong>حقیقی زندگی سے:</strong> بازار کے منظر سے جمع، تفریق، پیسے</li>
+    </ul>
+    <div class="highlight-box">
+      <p><strong>ریاضی کے Manipulatives:</strong> حساب کا فریم (Abacus) • تکسیمی ٹائلز • ہندسی اشکال • نمبر لائن • گنتی کے ٹکڑے/بلاکس</p>
+    </div>
+  </div>
+
+  <!-- Previous Papers S7 -->
+  <div class="practice-section">
+    <div class="practice-title"><span class="icon">📋</span> پچھلے امتحانی سوالات — S7</div>
+    <div class="paper-section">
+      <div class="paper-year">جنوری ۲۰۲۱</div>
+      <div class="paper-q"><span>۱.</span><span>ابتدائی سطح پر سائنس تعلیم کے اہداف کیا ہیں؟</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۲.</span><span>ریاضی تدریس میں CPA نقطہ نظر بیان کریں۔</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۳.</span><span>سائنس میں استفساری تعلیم کیا ہے؟ مثال دیں۔</span><span class="marks">۵ نمبر</span></div>
+      <div class="paper-q"><span>۴.</span><span>ریاضی کے Manipulatives کیا ہیں؟ چار کے نام اور استعمال بتائیں۔</span><span class="marks">۵ نمبر</span></div>
+    </div>
+    <div class="paper-section">
+      <div class="paper-year">جنوری ۲۰۲۳</div>
+      <div class="paper-q"><span>۱.</span><span>5E ماڈل کو مثال کے ساتھ بیان کریں۔</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۲.</span><span>ریاضی کی بے چینی کیا ہے؟ استاد اسے کیسے روک سکتا ہے؟</span><span class="marks">۱۰ نمبر</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ============================================================ -->
+<!-- S8 – SOCIAL SCIENCE PEDAGOGY -->
+<!-- ============================================================ -->
+<div class="subject-section" id="s8">
+  <div class="subject-header">
+    <div class="subject-num">مضمون ہشتم • S8</div>
+    <h2>سماجی علوم کی تدریس</h2>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۱: سماجی علوم کی نوعیت اور دائرہ کار</div>
+    <div class="unit-text">سماجی علوم ایک مربوط مضمون ہے جو تاریخ، جغرافیہ، شہریات (سیاسیات)، اور معاشیات کو ملا کر انسانی سماج کو سمجھاتا ہے۔</div>
+    <ul class="point-list">
+      <li><strong>تاریخ</strong> — ماضی کا مطالعہ اور حال پر اس کا اثر</li>
+      <li><strong>جغرافیہ</strong> — زمین کی سطح، آب و ہوا، وسائل، اور انسانی بستیاں</li>
+      <li><strong>شہریات</strong> — حکومت، جمہوریت، حقوق، اور ذمہ داریاں</li>
+      <li><strong>معاشیات</strong> — پیداوار، تقسیم، اور اشیاء کی کھپت</li>
+    </ul>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۲: سماجی علوم پڑھانے کے طریقے</div>
+    <ul class="point-list">
+      <li><strong>کہانی سنانے کا طریقہ:</strong> تاریخ کو زندہ کرنا — آزادی کے سپاہی کی کہانی</li>
+      <li><strong>منصوبہ طریقہ:</strong> کئی ہفتوں تک سماجی موضوع کی تحقیق</li>
+      <li><strong>بحث طریقہ:</strong> تاریخی یا شہری سوالات پر منظم مباحثہ</li>
+      <li><strong>فیلڈ ٹرپ:</strong> تاریخی مقامات، سرکاری دفاتر، بازار، فارم</li>
+      <li><strong>نقشہ کام:</strong> جغرافیہ کے لیے لازمی — باقاعدہ نقشہ مشق</li>
+      <li><strong>رول پلے اور ڈرامہ:</strong> تاریخی شخصیات، شہری منظر</li>
+      <li><strong>سروے طریقہ:</strong> طلبا برادری سے ڈیٹا اکٹھا کرتے ہیں</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">تاریخ پڑھانے میں کہانی سنانے کا طریقہ کیسے مدد کرتا ہے؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        تاریخ بنیادی طور پر انسانی کہانیوں کا مجموعہ ہے۔ کہانی سنانا چھوٹے طلبا کے لیے تاریخ کو زندہ کرنے کا سب سے طاقتور طریقہ ہے۔ جب استاد بھگت سنگھ کی کہانی سناتا ہے — محض تاریخوں کی فہرست نہیں بلکہ ایک ۲۳ سالہ نوجوان کی کہانی جس نے نوآبادیاتی غلامی میں جینے کی بجائے مرنا پسند کیا — طلبا کچھ محسوس کرتے ہیں۔ وہ جذباتی طور پر جڑ جاتے ہیں۔ کہانی سنانا سکھاتا ہے: ہمدردی، نقطہ نظر، سبب اور اثر، تاریخی سوچ۔
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-question">سماجی علوم میں رول پلے کا طریقہ کیا ہے؟ مثال دیں۔</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        رول پلے میں طلبا تاریخی شخصیات، شہری قائدین، یا سماجی کرداروں کا روپ دھار کر کسی منظر کو ادا کرتے ہیں۔ مثال — آئین ساز اسمبلی کی بحث: طلبا ۱۹۴۷ کی دستور ساز اسمبلی کے ارکان کا رول کریں، گائے کے تحفظ پر بحث کریں۔ یہ سرگرمی سکھاتی ہے: دستور ساز اسمبلی کیا تھی اور اس نے کیا کیا، جمہوری بحث کیسے کام کرتی ہے، ۱۹۴۷ کے ہندوستان میں خیالات کا تنوع، آئین سمجھوتے اور مکالمے کا نتیجہ تھا۔
+      </div>
+    </div>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۳: تاریخ پڑھانا</div>
+    <ul class="point-list">
+      <li><strong>معلوم سے نامعلوم کی طرف:</strong> خاندانی تاریخ، مقامی تاریخ، پھر قومی تاریخ</li>
+      <li><strong>بنیادی ذرائع:</strong> اصل دستاویزات، خطوط، سکے، تصاویر، نوادر</li>
+      <li><strong>ثانوی ذرائع:</strong> کتابیں، نصابی کتب، ماضی کے بارے میں لکھی گئی دستاویزات</li>
+      <li><strong>سمے لکیر (Timeline):</strong> کلاس روم کی دیوار پر تاریخی واقعات کی بصری ترتیب</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">ابتدائی اسکول کی تاریخ مقامی تاریخ سے کیوں شروع ہونی چاہیے؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        ابتدائی اسکول کی تاریخ مقامی تاریخ سے شروع ہونی چاہیے کیونکہ بنیادی تدریسی اصول ہے: معلوم سے نامعلوم کی طرف۔ اورنگ آباد کا بچہ دولت آباد قلعہ جانتا ہے۔ پونے کا بچہ شنیور واڑہ دیکھ چکا ہے۔ جو بچہ چھو سکے، دیکھ سکے، اور جذباتی طور پر جڑ سکے، اس سے تاریخ پہلے سبق سے ہی حقیقی اور بامعنی بن جاتی ہے۔ مقامی تاریخ: برادری کی شناخت اور فخر پیدا کرتی ہے، ماضی اور حال کا تعلق ظاہر کرتی ہے، اصلی تاریخی تحقیق کے مواقع فراہم کرتی ہے۔
+      </div>
+    </div>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۴: جغرافیہ پڑھانا</div>
+    <ul class="point-list">
+      <li><strong>نقشہ مہارت کی ترقی:</strong> کلاس ۱-۲: کلاس روم کا خاکہ → کلاس ۳-۴: محلے کا نقشہ → کلاس ۵-۶: ریاست، ملک → کلاس ۷+: عالمی نقشے</li>
+      <li><strong>TODALS:</strong> عنوان (T)، سمت (O)، تاریخ (D)، مصنف (A)، علامات (L)، پیمانہ (S)</li>
+      <li>ماحولیاتی تعلیم سے تعلق — مقامی ماحول، آلودگی، پانی کا تحفظ</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">جغرافیہ کی تعلیم کو ماحولیاتی تعلیم سے کیسے جوڑا جائے؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        جغرافیہ اور ماحولیاتی تعلیم قدرتی شراکت دار ہیں — جغرافیہ مواد فراہم کرتا ہے (زمینی ہیئت، آب و ہوا، وسائل) جبکہ ماحولیاتی تعلیم اقدار اور عمل دیتی ہے (تحفظ، پائیداری)۔ کلاس میں جوڑنے کے طریقے: مقامی ماحول کا مطالعہ — اسکول کے قریب کون سے درخت ہیں؟ آلودگی کا نقشہ — طلبا مقامی آلودگی کے ذرائع نقشے پر نشان لگائیں۔ پانی کا تحفظ — مقامی پانی کے ذرائع، بارش کا ڈیٹا۔ حیاتیاتی تنوع — اسکول باغ میں مقامی پرندے، پودے، کیڑے۔
+      </div>
+    </div>
+  </div>
+
+  <div class="unit-block">
+    <div class="unit-title">اکائی ۵: شہریات اور معاشیات پڑھانا</div>
+    <ul class="point-list">
+      <li>جمہوریت کلاس میں: کلاس کونسل، فیصلہ سازی، ووٹنگ</li>
+      <li>پنچایتی راج نظام کا مطالعہ — گاؤں کی پنچایت کا دورہ</li>
+      <li>انتخابی نقلی عمل (Classroom Election) — جمہوری عمل کا تجربہ</li>
+      <li>معاشی تصورات: پیشے، بازار، پیسہ، بجٹ، تبادلہ (بارٹر)</li>
+    </ul>
+
+    <div class="qa-block">
+      <div class="qa-question">ابتدائی اسکول کے طلبا کو جمہوریت اور شہری شرکت کیسے سکھائیں؟</div>
+      <div class="qa-answer">
+        <span class="ans-label">✔ جواب:</span>
+        چھوٹے بچوں کو جمہوریت سکھانے کے لیے اسے تجربے پر مبنی بنانا ضروری ہے — نظری نہیں۔ کلاس جمہوریت: ایک کلاس کونسل قائم کریں جہاں طلبا باری باری کلاس مانیٹر، لائبریرین بنیں۔ کلاس کے فیصلے ووٹنگ کے ذریعے ہوں۔ پنچایت کا مطالعہ: مقامی گرام پنچایت کا دورہ۔ منتخب پنچ یا کارپوریٹر سے بات کریں: آپ کیسے منتخب ہوئے؟ آپ کی ذمہ داریاں کیا ہیں؟ آئین کا مطالعہ: دیباچہ بلند آواز سے پڑھیں — انصاف، آزادی، مساوات، اخوت۔ انتخابی نقلی عمل: کلاس میں ماڈل انتخابات کرائیں۔
+      </div>
+    </div>
+  </div>
+
+  <!-- Previous Papers S8 -->
+  <div class="practice-section">
+    <div class="practice-title"><span class="icon">📋</span> پچھلے امتحانی سوالات — S8</div>
+    <div class="paper-section">
+      <div class="paper-year">جنوری ۲۰۲۱</div>
+      <div class="paper-q"><span>۱.</span><span>سماجی علوم کیا ہے؟ اس کی نوعیت، دائرہ کار، اور اہداف بیان کریں۔</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۲.</span><span>سماجی علوم پڑھانے کے چار طریقے بیان کریں۔</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۳.</span><span>کہانیوں اور مقامی مثالوں سے تاریخ کیسے پڑھائیں؟</span><span class="marks">۵ نمبر</span></div>
+      <div class="paper-q"><span>۴.</span><span>سماجی علوم میں رول پلے کا کردار کیا ہے؟</span><span class="marks">۵ نمبر</span></div>
+    </div>
+    <div class="paper-section">
+      <div class="paper-year">جنوری ۲۰۲۳</div>
+      <div class="paper-q"><span>۱.</span><span>ابتدائی اسکول میں جغرافیہ پڑھانے کے طریقے بیان کریں۔</span><span class="marks">۱۰ نمبر</span></div>
+      <div class="paper-q"><span>۲.</span><span>ابتدائی طلبا کو شہریات اور جمہوریت کیسے پڑھائیں؟</span><span class="marks">۱۰ نمبر</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ============================================================ -->
+<!-- PRACTICE QUESTIONS SECTION -->
+<!-- ============================================================ -->
+<div class="subject-section" id="practice">
+  <div class="subject-header">
+    <div class="subject-num">مشق کے سوالات</div>
+    <h2>۴۰۰ مشق سوالات — تمام ۸ مضامین</h2>
+  </div>
+
+  <!-- S1 Practice -->
+  <div class="practice-section">
+    <div class="practice-title"><span class="icon">S1</span> ہندوستانی سماج اور تعلیم — خالی جگہ پُر کریں</div>
+    <div class="fill-item"><div class="fill-q">۱. ہندوستانی آئین کا آرٹیکل _______ حقِ تعلیم فراہم کرتا ہے۔</div><div class="fill-a">آرٹیکل ۲۱A</div></div>
+    <div class="fill-item"><div class="fill-q">۲. ۸۶واں آئینی ترمیم _______ میں پاس کیا گیا۔</div><div class="fill-a">۲۰۰۲</div></div>
+    <div class="fill-item"><div class="fill-q">۳. سچر کمیٹی رپورٹ _______ میں شائع ہوئی۔</div><div class="fill-a">۲۰۰۶</div></div>
+    <div class="fill-item"><div class="fill-q">۴. ایکلویہ ماڈل رہائشی اسکول _______ طلبا کے لیے قائم کیے جاتے ہیں۔</div><div class="fill-a">درج فہرست قبائل (ST)</div></div>
+    <div class="fill-item"><div class="fill-q">۵. تین زبانوں کا فارمولا _______ کمیشن نے تجویز کیا۔</div><div class="fill-a">کوٹھاری کمیشن (۱۹۶۴-۶۶)</div></div>
+    <div class="fill-item"><div class="fill-q">۶. آزادی کے وقت ہندوستان کی خواتین کی شرح خواندگی تقریباً _______ تھی۔</div><div class="fill-a">تقریباً ۸٪</div></div>
+    <div class="fill-item"><div class="fill-q">۷. RTE قانون _______ اپریل ۲۰۱۰ کو نافذ ہوا۔</div><div class="fill-a">۱ اپریل ۲۰۱۰</div></div>
+    <div class="fill-item"><div class="fill-q">۸. RTE کے تحت نجی اسکولوں میں EWS کے لیے _______ فیصد نشستیں مخصوص ہیں۔</div><div class="fill-a">۲۵٪</div></div>
+    <div class="fill-item"><div class="fill-q">۹. نئی تعلیم _______ نے پیش کی۔</div><div class="fill-a">مہاتما گاندھی</div></div>
+    <div class="fill-item"><div class="fill-q">۱۰. GPI کا مطلب _______ ہے۔</div><div class="fill-a">Gender Parity Index (صنفی برابری کا اشاریہ)</div></div>
+    <div class="fill-item"><div class="fill-q">۱۱. آرٹیکل ۴۶ ریاست کو _______ اور _______ برادریوں کی تعلیمی مفادات فروغ دینے کا حکم دیتا ہے۔</div><div class="fill-a">درج فہرست ذاتیں اور درج فہرست قبائل</div></div>
+    <div class="fill-item"><div class="fill-q">۱۲. EMRS کا مطلب _______ ہے۔</div><div class="fill-a">Eklavya Model Residential Schools</div></div>
+    <div class="fill-item"><div class="fill-q">۱۳. OBC ریزرویشن تعلیم میں _______ فیصد ہے۔</div><div class="fill-a">۲۷٪</div></div>
+    <div class="fill-item"><div class="fill-q">۱۴. NEP 2020 نے ۲۰۳۰ تک _______ فیصد GER کا ہدف مقرر کیا ہے۔</div><div class="fill-a">۱۰۰٪</div></div>
+    <div class="fill-item"><div class="fill-q">۱۵. ہندوستان میں _______ سے زیادہ قبائلی (آدیواسی) گروہ ہیں۔</div><div class="fill-a">۷۰۰ سے زیادہ</div></div>
+  </div>
+
+  <!-- S1 True/False -->
+  <div class="practice-section">
+    <div class="practice-title"><span class="icon">S1</span> درست یا غلط</div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">آرٹیکل ۲۱A ۸۶ویں ترمیم کے ذریعے آئین میں شامل کیا گیا۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">سچر کمیٹی رپورٹ نے پایا کہ مسلم خواندگی قومی اوسط سے اوپر تھی۔ <span class="tf-note">(درحقیقت بہت نیچے تھی)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">ایکلویہ ماڈل رہائشی اسکول اقلیتی طلبا کے لیے ہیں۔ <span class="tf-note">(یہ ST طلبا کے لیے ہیں)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">گاندھی کی نئی تعلیم نے پیداواری کام کے ذریعے تعلیم تجویز کی۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">تین زبانوں کا فارمولا علاقائی زبان، ہندی، اور انگریزی سیکھنے کا مطالبہ کرتا ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">ڈاکٹر بی آر امبیڈکر ہندوستانی آئین کے معمار تھے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">کستوربا گاندھی بالیکا ودیالیہ پسماندہ لڑکیوں کے لیے رہائشی اسکول ہیں۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">قومی یکجہتی کا مطلب ثقافتی یکسانیت ہے۔ <span class="tf-note">(یہ تنوع میں اتحاد ہے)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">ہدایتی اصول (Directive Principles) عدالت میں قابلِ نفاذ ہیں۔ <span class="tf-note">(یہ ناقابلِ نفاذ ہیں)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">مڈ ڈے میل اسکیم نے اسکول میں حاضری خاص طور پر لڑکیوں کی بہتر کی ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">ہندوستان میں ۲۲ سے زیادہ سرکاری درج شدہ زبانیں ہیں۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">ہندوستان کی قبائلی آبادی کل آبادی کا تقریباً ۲۵٪ ہے۔ <span class="tf-note">(یہ تقریباً ۸٪ ہے)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">اچھوت پن کو آرٹیکل ۱۷ کے تحت ختم کیا گیا۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">NEP 2020 نے ۲۰۳۰ تک ۱۰۰٪ GER کا ہدف مقرر کیا ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">سماجی درجہ بندی صرف اقتصادی طبقے کی تقسیم ہے۔ <span class="tf-note">(ذات، طبقہ، صنف، مذہب سب شامل ہیں)</span></div></div>
+  </div>
+
+  <!-- S1 Short Defs -->
+  <div class="practice-section">
+    <div class="practice-title"><span class="icon">S1</span> مختصر تعریفیں</div>
+    <div class="def-item"><div class="def-q">سماجی درجہ بندی کیا ہے؟</div><div class="def-a">سماجی درجہ بندی سماج کی ذات، طبقہ، صنف، مذہب، یا نسل کی بنیاد پر درجہ بندی میں تقسیم ہے — جہاں مختلف گروہوں کو طاقت، دولت، تعلیم، اور مواقع تک غیر مساوی رسائی حاصل ہے۔</div></div>
+    <div class="def-item"><div class="def-q">قومی یکجہتی کی تعریف کریں۔</div><div class="def-a">قومی یکجہتی سے مراد ایک متنوع قوم کا اتحاد ہے — مختلف مذاہب، ذاتوں، زبانوں، اور علاقوں کے لوگوں میں مشترکہ شناخت اور مقصد کا احساس، ہر گروہ کی انفرادیت کو برقرار رکھتے ہوئے۔</div></div>
+    <div class="def-item"><div class="def-q">صنفی برابری کا اشاریہ (GPI) کیا ہے؟</div><div class="def-a">GPI تعلیم میں مردوں کے مقابلے خواتین کے داخلے کا تناسب ناپتا ہے۔ GPI 1.0 مساوی داخلے کا مطلب ہے؛ 1.0 سے نیچے مطلب ہے لڑکوں کے مقابلے کم لڑکیاں داخل ہیں۔</div></div>
+    <div class="def-item"><div class="def-q">نئی تعلیم کیا ہے؟</div><div class="def-a">نئی تعلیم (بنیادی تعلیم) گاندھی کا تعلیمی فلسفہ تھا جس میں پیداواری ہنر کے ذریعے، مادری زبان میں، پورے انسان — جسم، ذہن، اور روح — کی ترقی کرنا شامل تھا، طلبا کو خود کفیل بنانا۔</div></div>
+    <div class="def-item"><div class="def-q">بیٹی بچاؤ بیٹی پڑھاؤ اسکیم کیا ہے؟</div><div class="def-a">بیٹی بچاؤ بیٹی پڑھاؤ ۲۰۱۵ میں شروع کی گئی حکومتِ ہند کی اسکیم ہے جو گرتے جنسی تناسب کو حل کرنے اور لڑکیوں کی تعلیم و فلاح کو فروغ دینے کے لیے ہے۔</div></div>
+    <div class="def-item"><div class="def-q">مڈ ڈے میل اسکیم کیا ہے؟</div><div class="def-a">مڈ ڈے میل اسکیم سرکاری ابتدائی اسکولوں کے طلبا کو مفت پکا ہوا کھانا فراہم کرتی ہے۔ اس نے خاص طور پر لڑکیوں اور غریب خاندانوں کے بچوں میں داخلہ، حاضری، اور تسلسل میں نمایاں بہتری لائی ہے۔</div></div>
+    <div class="def-item"><div class="def-q">اچھوت پن کیا ہے؟ کس آرٹیکل کے تحت ختم کیا گیا؟</div><div class="def-a">اچھوت پن سب سے نچلی ذاتوں (دلتوں) کے خلاف سماجی تفریق اور الگ تھلگی کا رواج تھا۔ اسے ہندوستانی آئین کے آرٹیکل ۱۷ نے ختم کیا، جو اس کی مشق کو قابلِ سزا جرم قرار دیتا ہے۔</div></div>
+    <div class="def-item"><div class="def-q">آشرم اسکول کیا ہیں؟</div><div class="def-a">آشرم اسکول قبائلی بچوں کے لیے ریاستی حکومتوں کے قائم کردہ رہائشی اسکول ہیں۔ طلبا اسکول میں رہتے ہیں، مفت قیام و طعام اور تعلیم حاصل کرتے ہیں، جس سے فاصلے اور غربت کی رکاوٹیں دور ہوتی ہیں۔</div></div>
+  </div>
+
+  <!-- S2 Practice -->
+  <div class="practice-section">
+    <div class="practice-title"><span class="icon">S2</span> اسکول کلچر اور مینجمنٹ — خالی جگہ پُر کریں</div>
+    <div class="fill-item"><div class="fill-q">۱. SMC کا مطلب _______ ہے۔</div><div class="fill-a">School Management Committee (اسکول مینجمنٹ کمیٹی)</div></div>
+    <div class="fill-item"><div class="fill-q">۲. RTE 2009 کے تحت SMC کے کم از کم _______٪ ارکان والدین ہونے چاہئیں۔</div><div class="fill-a">۷۵٪</div></div>
+    <div class="fill-item"><div class="fill-q">۳. DIET کا مطلب _______ ہے۔</div><div class="fill-a">District Institute of Education and Training</div></div>
+    <div class="fill-item"><div class="fill-q">۴. SDP کا مطلب _______ ہے۔</div><div class="fill-a">School Development Plan (اسکول ترقیاتی منصوبہ)</div></div>
+    <div class="fill-item"><div class="fill-q">۵. NPST کا مطلب _______ ہے۔</div><div class="fill-a">National Professional Standards for Teachers</div></div>
+    <div class="fill-item"><div class="fill-q">۶. NEP 2020 اساتذہ کو ہر سال کم از کم _______ گھنٹے CPD مکمل کرنے کا حکم دیتی ہے۔</div><div class="fill-a">۵۰ گھنٹے</div></div>
+    <div class="fill-item"><div class="fill-q">۷. _______ قیادت بنیادی طور پر درس و تدریس کی بہتری پر توجہ دیتی ہے۔</div><div class="fill-a">تعلیمی قیادت (Instructional Leadership)</div></div>
+    <div class="fill-item"><div class="fill-q">۸. CPD کا مطلب _______ ہے۔</div><div class="fill-a">Continuous Professional Development (مسلسل پیشہ ورانہ ترقی)</div></div>
+    <div class="fill-item"><div class="fill-q">۹. DIKSHA کا مطلب _______ ہے۔</div><div class="fill-a">Digital Infrastructure for Knowledge Sharing</div></div>
+    <div class="fill-item"><div class="fill-q">۱۰. BRC کا مطلب _______ اور CRC کا مطلب _______ ہے۔</div><div class="fill-a">Block Resource Centre اور Cluster Resource Centre</div></div>
+  </div>
+
+  <!-- S2 True/False -->
+  <div class="practice-section">
+    <div class="practice-title"><span class="icon">S2</span> اسکول مینجمنٹ — درست یا غلط</div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">RTE 2009 کے تحت SMC میں کم از کم ۷۵٪ استاد ارکان ہونے چاہئیں۔ <span class="tf-note">(۷۵٪ والدین ہونے چاہئیں)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">اسکول ڈویلپمنٹ پلان پوری ۵ سالہ مدت کے لیے تیار کیا جاتا ہے۔ <span class="tf-note">(یہ سالانہ ہوتا ہے)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">تعلیمی قیادت درس کے معیار کو بہتر بنانے پر توجہ دیتی ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">DIET ضلع سطح پر اساتذہ کی تربیت کا ذمہ دار ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">تقسیم شدہ قیادت تمام اختیار ہیڈ ماسٹر میں مرکوز کرتی ہے۔ <span class="tf-note">(یہ کئی لوگوں میں اختیار تقسیم کرتی ہے)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">NEP 2020 اساتذہ کے لیے سالانہ ۵۰ گھنٹے CPD لازمی قرار دیتی ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">اسکول کلچر مکمل طور پر اسکول کی جسمانی ساخت سے طے ہوتا ہے۔ <span class="tf-note">(اقدار، تعلقات، اور روزانہ کی رسومات سے بنتا ہے)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">اسکول کی تبدیلی ایک بار کا واقعہ ہے، جاری عمل نہیں۔ <span class="tf-note">(یہ مسلسل، مشترکہ عمل ہے)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">ایکشن ریسرچ استاد کی پیشہ ورانہ ترقی کی ایک شکل ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">مثبت اسکول کلچر صرف امتحانی نمبروں سے نہیں، کوشش اور ترقی سے بھی کامیابی کو سراہتا ہے۔</div></div>
+  </div>
+
+  <!-- S5 True/False -->
+  <div class="practice-section">
+    <div class="practice-title"><span class="icon">S5</span> ہندی تدریس — درست یا غلط</div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">ہندی اردو کی طرح نستعلیق رسم الخط استعمال کرتی ہے۔ <span class="tf-note">(ہندی دیوناگری استعمال کرتی ہے)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">اردو میڈیم طلبا کے لیے ہندی عموماً دوسری یا تیسری زبان ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">محاورے ہندی ضرب الامثال ہیں۔ <span class="tf-note">(محاورے اصطلاحات ہیں؛ کہاوتیں ضرب الامثال ہیں)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">براہِ راست طریقہ ہندی پڑھانے میں اردو کو وضاحت کے لیے استعمال کرتا ہے۔ <span class="tf-note">(براہِ راست طریقہ صرف ہندی استعمال کرتا ہے)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">دیوناگری رسم الخط بائیں سے دائیں لکھی جاتی ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">دو لسانی طریقہ ہندی سیکھنے کے ابتدائی مراحل میں سب سے مفید ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">شروتلیکھ (Shrutlekh) زبانی تشخیص کی ایک شکل ہے۔ <span class="tf-note">(شروتلیکھ یعنی املا، تحریری تشخیص ہے)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">مواصلاتی نقطہ نظر (CLT) حقیقی مواصلات پر توجہ دیتا ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">قواعد ترجمہ طریقہ روانی سے بولنے والے طلبا پیدا کرتا ہے۔ <span class="tf-note">(GTM پڑھنے/لکھنے کے لیے اچھا لیکن بولنے کے لیے کمزور ہے)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">ہندی تدریس میں طالب علم کی مادری زبان (اردو) کو اثاثہ سمجھنا چاہیے۔</div></div>
+  </div>
+
+  <!-- S7 Practice -->
+  <div class="practice-section">
+    <div class="practice-title"><span class="icon">S7</span> سائنس اور ریاضی — مختصر تعریفیں</div>
+    <div class="def-item"><div class="def-q">سائنسی مزاج کیا ہے؟</div><div class="def-a">سائنسی مزاج سائنسی انداز میں سوچنے کی عادت ہے — مفروضات پر سوال اٹھانا، ثبوت کا مطالبہ کرنا، صرف وہی قبول کرنا جو جانچا جا سکے، اور ثبوت ملنے پر رائے بدلنا۔ یہ آرٹیکل ۵۱A(h) کے تحت ہر ہندوستانی شہری کا بنیادی فرض ہے۔</div></div>
+    <div class="def-item"><div class="def-q">5E ماڈل کیا ہے؟</div><div class="def-a">5E ماڈل ایک تعمیری سائنس تدریس فریم ورک ہے جس کے پانچ مراحل ہیں: شامل کرنا (Engage — تجسس پیدا کرنا)، دریافت کرنا (Explore — ہاتھوں سے تحقیق)، وضاحت (Explain — نتائج اخذ کرنا)، وسعت دینا (Elaborate — نئی صورتحال پر لاگو کرنا)، جائزہ (Evaluate — سمجھ جانچنا)۔</div></div>
+    <div class="def-item"><div class="def-q">CPA نقطہ نظر کیا ہے؟</div><div class="def-a">CPA (Concrete-Pictorial-Abstract) نقطہ نظر، جیروم برونر نے تیار کیا، ریاضی تین مراحل میں پڑھاتا ہے: پہلے جسمانی اشیاء سے (ٹھوس)، پھر خاکوں اور تصاویر سے (تصویری)، پھر صرف علامات اور اعداد سے (مجرد)۔</div></div>
+    <div class="def-item"><div class="def-q">ریاضی کی بے چینی کیا ہے؟</div><div class="def-a">ریاضی کی بے چینی وہ خوف، تناؤ، اور بے بسی کا احساس ہے جو کچھ لوگوں کو ریاضی کے کام کا سامنا کرتے وقت ہوتا ہے۔ یہ سیکھا ہوا ردِ عمل ہے (پیدائشی نہیں) اور معاون، صبر والی تدریس سے نمایاں طور پر کم کی جا سکتی ہے۔</div></div>
+    <div class="def-item"><div class="def-q">ریاضی کا Manipulative کیا ہے؟</div><div class="def-a">ریاضی کا Manipulative ایک جسمانی چیز ہے جسے طلبا ریاضی کے تصورات کو ٹھوس طریقے سے سمجھنے کے لیے چھو اور حرکت دے سکتے ہیں — جیسے بلاکس، تکسیمی ٹائلز، نمبر لائن، یا ہندسی اشکال۔</div></div>
+    <div class="def-item"><div class="def-q">سائنس میں مشاہدہ (Observation) کیا ہے؟</div><div class="def-a">سائنس میں مشاہدے کا مطلب ہے کسی چیز یا رجحان کے بارے میں تفصیلات کو دیکھنے اور ریکارڈ کرنے کے لیے تمام پانچ حواس کا محتاط استعمال — سائنس کی پہلی اور سب سے بنیادی مہارت۔</div></div>
+    <div class="def-item"><div class="def-q">سائنس میں نتیجہ (Inference) کیا ہے؟</div><div class="def-a">نتیجہ مشاہدات اور ثبوت سے اخذ کردہ رائے ہے۔ مشاہدے کے برعکس (جو آپ براہِ راست محسوس کرتے ہیں)، نتیجے کے لیے استدلال ضروری ہے۔ مثال: "پتھر ٹھنڈا ہے" (مشاہدہ) بمقابلہ "پتھر سائے میں تھا" (نتیجہ)۔</div></div>
+  </div>
+
+  <!-- S8 Practice -->
+  <div class="practice-section">
+    <div class="practice-title"><span class="icon">S8</span> سماجی علوم — درست یا غلط</div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">سماجی علوم تاریخ، جغرافیہ، شہریات، اور معاشیات کو یکجا کرتا ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">کہانی سنانے کا طریقہ صرف زبان کی تعلیم کے لیے مفید ہے، سماجی علوم کے لیے نہیں۔ <span class="tf-note">(تاریخ کی تعلیم میں کہانی سنانا بہت مؤثر ہے)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">تاریخ میں بنیادی ذریعہ ماضی کے بارے میں لکھی گئی کتاب ہے۔ <span class="tf-note">(بنیادی ذریعہ اس دور کی اصل دستاویز یا نوادر ہے)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">نقشہ مہارت عالمی نقشوں سے شروع ہونی چاہیے پھر مقامی نقشوں کی طرف آنی چاہیے۔ <span class="tf-note">(مقامی/کلاس روم نقشوں سے شروع کریں)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">سماجی علوم کا سروے طریقہ طلبا کو برادری سے ڈیٹا اکٹھا کرانے پر مشتمل ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">TODALS ایک اچھے نقشے کے اجزاء کے لیے یادداشتی کلمہ ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">ابتدائی سطح پر بارٹر اور پیسے جیسے معاشی تصورات نہیں پڑھائے جا سکتے۔ <span class="tf-note">(یہ ابتدائی سطح پر بالکل مناسب ہیں)</span></div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">کلاس روم انتخابی نقلی عمل جمہوری عمل کا براہِ راست تجربے سے سکھاتا ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-true">درست</span><div class="tf-q">پنچایتی راج ہندوستان کا دیہی مقامی خود حکومت کا نظام ہے۔</div></div>
+    <div class="tf-item"><span class="tf-badge tf-false">غلط</span><div class="tf-q">قومی تاریخ سے پہلے مقامی تاریخ پڑھانا نصاب کے ترتیب کی خلاف ورزی ہے۔ <span class="tf-note">(مقامی تاریخ سے شروع کرنا تجویز کردہ تدریسی طریقہ ہے)</span></div></div>
+  </div>
+
+</div>
+
+<!-- ============================================================ -->
+<!-- IMPORTANT TERMS TABLE -->
+<!-- ============================================================ -->
+<div class="practice-section" style="margin-top: 40px;">
+  <div class="practice-title"><span class="icon">📚</span> اہم مخففات اور اصطلاحات</div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-top: 10px;">
+    <div class="fill-item"><div class="fill-q">RTE</div><div class="fill-a">Right to Education Act 2009</div></div>
+    <div class="fill-item"><div class="fill-q">NEP</div><div class="fill-a">National Education Policy 2020</div></div>
+    <div class="fill-item"><div class="fill-q">SMC</div><div class="fill-a">School Management Committee</div></div>
+    <div class="fill-item"><div class="fill-q">SDP</div><div class="fill-a">School Development Plan</div></div>
+    <div class="fill-item"><div class="fill-q">DIET</div><div class="fill-a">District Institute of Education & Training</div></div>
+    <div class="fill-item"><div class="fill-q">BRC</div><div class="fill-a">Block Resource Centre</div></div>
+    <div class="fill-item"><div class="fill-q">CRC</div><div class="fill-a">Cluster Resource Centre</div></div>
+    <div class="fill-item"><div class="fill-q">NPST</div><div class="fill-a">National Professional Standards for Teachers</div></div>
+    <div class="fill-item"><div class="fill-q">CPD</div><div class="fill-a">Continuous Professional Development</div></div>
+    <div class="fill-item"><div class="fill-q">DIKSHA</div><div class="fill-a">Digital Infrastructure for Knowledge Sharing</div></div>
+    <div class="fill-item"><div class="fill-q">EMRS</div><div class="fill-a">Eklavya Model Residential Schools</div></div>
+    <div class="fill-item"><div class="fill-q">GPI</div><div class="fill-a">Gender Parity Index</div></div>
+    <div class="fill-item"><div class="fill-q">GER</div><div class="fill-a">Gross Enrolment Ratio</div></div>
+    <div class="fill-item"><div class="fill-q">CCE</div><div class="fill-a">Continuous and Comprehensive Evaluation</div></div>
+    <div class="fill-item"><div class="fill-q">CPA</div><div class="fill-a">Concrete-Pictorial-Abstract (ریاضی)</div></div>
+    <div class="fill-item"><div class="fill-q">LSRW</div><div class="fill-a">Listening, Speaking, Reading, Writing</div></div>
+    <div class="fill-item"><div class="fill-q">FLN</div><div class="fill-a">Foundational Literacy and Numeracy</div></div>
+    <div class="fill-item"><div class="fill-q">MLE</div><div class="fill-a">Multi-Lingual Education</div></div>
+    <div class="fill-item"><div class="fill-q">OBC</div><div class="fill-a">Other Backward Classes</div></div>
+    <div class="fill-item"><div class="fill-q">SC/ST</div><div class="fill-a">Scheduled Castes / Scheduled Tribes</div></div>
+  </div>
+</div>
+
+</div><!-- end container -->
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+  <p>D.El.Ed دوسرا سال • مہاراشٹر اردو بورڈ • ۲۰۲۵-۲۶</p>
+  <p style="margin-top: 8px;">تمام ۸ مضامین • مکمل نوٹس • ۴۰۰ مشق سوالات • پچھلے امتحانی سوالات</p>
+  <p style="margin-top: 12px; color: var(--gold);">❤ گلستاں کے لیے — اشرف کی طرف سے ❤</p>
+</div>
+
+</body>
+</html>
